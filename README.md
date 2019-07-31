@@ -1,24 +1,8 @@
-# README
+# s5beginning
+==
+Questa applicazione Rails è una base comune per poter poi sviluppare varie altre applicazioni.
+E' sufficiente fare un fork su github ed effettuare un git clone su una nuova applicazione.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+history:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* v0.1.0  31.07.19  creazione dell'applicazione su rails 5.2.3
