@@ -1,4 +1,4 @@
-<h1> Pagina A </h1>
-<p> Il testo verrà preso dal database ma alcuni messaggi sono passati dall'applicazione ed è quindi bene che vengano tradotti per essere pronti a supportare più lingue. </p>
+<h1> <%= t "mockups.page_a.first_header" %> </h1>
+<p> <%= t "mockups.page_a.first_paragraph" %> </p>
 <br>
-<p>  <%= link_to 'andiamo alla pagina B', mockups_page_b_path %> </p>
+<p>  <%= link_to t("mockups.page_a.link_goto_page_B"), mockups_page_b_path %> </p>
