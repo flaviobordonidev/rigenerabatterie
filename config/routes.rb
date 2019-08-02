@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   root 'mockups#page_a'
+
+  devise_for :users
+  resources :users
   
   get 'mockups/page_a'
   get 'mockups/page_b'
