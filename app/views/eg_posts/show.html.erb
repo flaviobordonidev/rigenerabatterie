@@ -15,5 +15,12 @@
   <%= @eg_post.user %>
 </p>
 
+<% if @eg_post.header_image.attached? %>
+  <p><%= image_tag @eg_post.header_image %></p>
+  <p><%= image_tag @eg_post.header_image.variant(resize: "400x400") %></p>
+<% else %>
+  <p>Nessuna immagine presente</p>
+<% end %>
+
 <%= link_to 'Edit', edit_eg_post_path(@eg_post) %> |
 <%= link_to 'Back', eg_posts_path %>
