@@ -7,7 +7,8 @@
 
 <p>
   <strong>Incipit:</strong>
-  <%= @eg_post.incipit %>
+  <%#= @eg_post.incipit %>
+  <%= sanitize "#{@eg_post.incipit}" %>
 </p>
 
 <p>

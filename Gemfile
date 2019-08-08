@@ -49,6 +49,9 @@ gem 'pagy', '~> 3.4', '>= 3.4.1'
 # API clients for AWS S3 services. Comunicazione con Amazon Web Service S3 per ActiveStorage
 gem 'aws-sdk-s3', '~> 1.46'
 
+# A rich text editor for everyday writing 
+gem 'trix-rails', '~> 2.0', require: 'trix'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

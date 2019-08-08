@@ -18,7 +18,8 @@
 
   <div class="field">
     <%= form.label :incipit %>
-    <%= form.text_area :incipit %>
+    <%#= form.text_area :incipit %>
+    <%= form.trix_editor :incipit, required: true, autofocus: true %>
   </div>
 
   <div class="field">
