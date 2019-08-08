@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   include Pundit
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
+  include Pagy::Backend
+
   def after_sign_in_path_for(resource_or_scope)
     users_path
     #current_user
