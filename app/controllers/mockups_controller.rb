@@ -4,4 +4,7 @@ class MockupsController < ApplicationController
 
   def page_b
   end
+
+  def page_c
+  end
 end
