@@ -52,6 +52,11 @@ gem 'aws-sdk-s3', '~> 1.46'
 # A rich text editor for everyday writing 
 gem 'trix-rails', '~> 2.0', require: 'trix'
 
+# The most popular HTML, CSS, and JavaScript framework. http://getbootstrap.com
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
