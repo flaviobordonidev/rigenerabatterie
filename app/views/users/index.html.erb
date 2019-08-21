@@ -2,6 +2,9 @@
 
 <h1>Users</h1>
 
+<%= link_to 'New User', new_user_path, class: "btn btn-sm btn-success float-right" %>
+<br/>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -30,6 +33,4 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New User', new_user_path %>
+<%= sanitize pagy_bootstrap_nav(@pagy) %>

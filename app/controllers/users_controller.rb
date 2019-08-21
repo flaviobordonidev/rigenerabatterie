@@ -6,7 +6,10 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    # @pagy, @users = pagy(User.where(id: current_user.id)) unless current_user.admin?
+    # @pagy, @users = pagy(User.all.order(created_at: "DESC")) if current_user.admin?
+    @pagy, @users = pagy(User.all.order(created_at: "ASC"), items: 2)
+    #@users = User.all
     authorize @users
   end
 
@@ -87,6 +90,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation, :remember_created_at, :role)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :remember_created_at, :role, :bio, :account_image)
     end
 end
