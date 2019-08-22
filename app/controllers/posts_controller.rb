@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all.order(created_at: "DESC")
+    authorize @posts
   end
 
   # GET /posts/1
@@ -16,6 +17,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = current_user.posts.new
+    authorize @post
   end
 
   # GET /posts/1/edit
@@ -26,6 +28,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    authorize @post
 
     respond_to do |format|
       if @post.save
@@ -66,6 +69,7 @@ class PostsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.friendly.find(params[:id])
+      authorize @post
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
