@@ -1,5 +1,6 @@
 class EgCompaniesController < ApplicationController
   before_action :set_eg_company, only: [:show, :edit, :update, :destroy]
+  layout 'dashboard'
 
   # GET /eg_companies
   # GET /eg_companies.json
