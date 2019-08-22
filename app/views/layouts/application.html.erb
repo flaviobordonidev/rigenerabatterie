@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <%= render 'layouts/dashboard_navbar' if current_user.present? %>
     <% if notice %><p class="alert alert-info"><%= notice %></p><% end %>
     <% if alert %><p class="alert alert-warning"><%= alert %></p><% end %>
     <%= yield %>

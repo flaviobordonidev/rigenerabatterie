@@ -1,5 +1,8 @@
 class MockupsController < ApplicationController
+  layout 'dashboard'
+
   def page_a
+    render layout: 'application'
   end
 
   def page_b

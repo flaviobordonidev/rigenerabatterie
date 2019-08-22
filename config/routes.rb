@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, path_names: {sign_in: 'login'}, path: '', controllers: { sessions: 'users/sessions' }
   resources :users
 
+  resources :posts
   resources :eg_companies
   resources :eg_posts
   resources :eg_users
