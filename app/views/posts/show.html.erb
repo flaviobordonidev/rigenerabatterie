@@ -12,7 +12,7 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @post.content %>
+  <%= sanitize "#{@post.content}" %>
 </p>
 
 <p>

@@ -60,6 +60,9 @@ gem 'jquery-rails'
 # slugging and permalink for Active Record. For creating human-friendly strings URLs and use as if they were numeric ids.
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 
+# A rich text editor for everyday writing 
+gem 'trix-rails', '~> 2.0', require: 'trix'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
