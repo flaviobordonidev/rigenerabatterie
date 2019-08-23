@@ -10,6 +10,9 @@ class Post < ApplicationRecord
 
   enum content_type: {image: 0, video_youtube: 1, video_vimeo: 2, audio: 3}
 
+  ## ActiveStorage
+  has_one_attached :main_image
+
   ## friendly_id
   friendly_id :title, use: :slugged
 

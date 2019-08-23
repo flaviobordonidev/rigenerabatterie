@@ -26,9 +26,13 @@
           </li>
           <li class="list-group-item">
             <div class="field">
-              <label class="control-label">Immagine</label>
-              <br><img src="https://images.pexels.com/photos/634843/pexels-photo-634843.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=200" alt="Immagine demo presa da pexels.com" width="200" height="200"><br>
-              <input type="file" name="myFile">
+              <%= form.label :main_image %>
+              <% if post.main_image.attached? %>
+                <p><%= image_tag post.main_image.variant(resize: "100x100") %></p>
+              <% else %>
+                <p>Nessuna immagine presente</p>
+              <% end %>
+              <%= form.file_field :main_image, class: "form-control-file" %>
             </div>
           </li>
           <li class="list-group-item">

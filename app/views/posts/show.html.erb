@@ -20,6 +20,12 @@
   <%= @post.content_type %>
 </p>
 
+<% if @post.main_image.attached? %>
+  <%= image_tag @post.main_image %>
+<% else %>
+  <p>Nessuna immagine presente</p>
+<% end %>
+
 <p>
   <strong>Video youtube:</strong>
   <%= @post.video_youtube %>
