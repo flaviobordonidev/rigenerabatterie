@@ -1,6 +1,7 @@
 class Authors::PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :destroy]
   before_action :authenticate_user!
+  layout 'dashboard'
 
   # GET /posts
   # GET /posts.json

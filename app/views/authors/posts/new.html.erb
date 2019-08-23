@@ -1,3 +1,10 @@
+<%# == Meta_data ============================================================ %>
+
+<% provide(:menu_nav_link_authors_posts, "active") %>
+<% provide(:card_title, "Nuovo Articolo") %>
+
+<%# == Meta_data - end ====================================================== %>
+
 <h1>New Post</h1>
 
 <%= render 'form', post: @post, authors_url: authors_posts_url %>

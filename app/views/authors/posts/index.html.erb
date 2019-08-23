@@ -1,8 +1,14 @@
+<%# == Meta_data ============================================================ %>
+
+<% provide(:menu_nav_link_authors_posts, "active") %>
+
+<%# == Meta_data - end ====================================================== %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Title</th>
@@ -28,9 +34,9 @@
         <td><%= post.video_vimeo %></td>
         <td><%= post.seocontent %></td>
         <td><%= post.user.name %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_authors_post_path(post) %></td>
-        <td><%= link_to 'Destroy', authors_post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', post, target: "_blank"%></td>
+        <td><%= link_to 'Edit', edit_authors_post_path(post), class: 'btn btn-sm btn-warning' %></td>
+        <td><%= link_to 'Destroy', authors_post_path(post), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>

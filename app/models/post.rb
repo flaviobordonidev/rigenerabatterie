@@ -8,6 +8,8 @@ class Post < ApplicationRecord
   
   # == Attributes ===========================================================
 
+  enum content_type: {image: 0, video_youtube: 1, video_vimeo: 2, audio: 3}
+
   ## friendly_id
   friendly_id :title, use: :slugged
 

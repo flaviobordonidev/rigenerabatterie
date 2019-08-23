@@ -1,24 +1,10 @@
 <%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this example_user from being saved:</h2>
-
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <br/>
-
   <div class="row">
     <!-- Basic info section -->
     <div class="col-md-6">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title"><%= yield(:page_title) %></h5>
+          <h5 class="card-title"><%= yield(:card_title) %></h5>
         </div>
   
         <ul class="list-group list-group-flush">
@@ -87,5 +73,17 @@
       </div>
     </div>
   </div>
+
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this example_user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
 <% end %>
