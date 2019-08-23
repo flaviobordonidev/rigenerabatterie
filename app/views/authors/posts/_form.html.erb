@@ -1,4 +1,9 @@
 <%= form_with(model: post, local: true, url: authors_url) do |form| %>
+  
+  <!-- Hidden fields -->
+  <%= form.text_field :user_id, style: 'display:none' %><!-- :user_id è fondamentale per l'azione new -->
+  <!-- Hidden fields end -->
+
   <div class="row">
     <div class="col-md-4">
       <!--<div class="card" style="width: 18rem;">-->
@@ -93,8 +98,5 @@
       </ul>
     </div>
   <% end %>
-
-    <%#= form.label :user_id %>
-    <%#= form.text_field :user_id %>
 
 <% end %>
