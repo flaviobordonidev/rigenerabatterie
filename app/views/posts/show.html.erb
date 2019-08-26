@@ -20,50 +20,44 @@
   <%= @post.content_type %>
 </p>
 
-<% if @post.main_image.attached? %>
-  <%= image_tag @post.main_image %>
-<% else %>
-  <p>Nessuna immagine presente</p>
-<% end %>
-
 <p>
-  <strong>Video youtube:</strong>
-  <%= @post.video_youtube %>
-</p>
-
-<p>
-  <strong>Video vimeo:</strong>
-  <%= @post.video_vimeo %>
+  <% case @post.content_type %>
+  <% when "image" %>
+    <% if @post.main_image.attached? %>
+      <%= image_tag @post.main_image %>
+    <% else %>
+      <p>Nessuna immagine presente</p>
+    <% end %>
+  <% when "video_youtube" %>
+    <% if @post.video_youtube.present? %>
+      <%= @post.video_youtube %>
+      <div class="entry-image">
+      	<!--<iframe src='https://www.youtube.com/embed/9kiLJCtjaHI?rel=0&autoplay=1' frameborder='0' allowfullscreen></iframe>-->
+        <iframe src="https://www.youtube.com/embed/<%= @post.video_youtube %>" frameborder='0' allowfullscreen></iframe>
+      </div>
+    <% else %>
+      <p>Nessun video YouTube presente</p>
+    <% end %>
+  <% when "video_vimeo" %>
+    <% if @post.video_vimeo.present? %>
+      <%= @post.video_vimeo %>
+      <div class="entry-image">
+      	<iframe src="https://player.vimeo.com/video/<%= @post.video_vimeo %>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    <% else %>
+      <p>Nessun video Vimeo presente</p>
+    <% end %>
+  <% when "audio" %>
+      <p>Audio da implementare</p>
+  <% else %>
+    <p> raise "menu a cascata type_of_content null o con valore non consentito" </p>
+  <% end %>
 </p>
 
 <p>
   <strong>Seocontent:</strong>
   <%= @post.seocontent %>
 </p>
-
-
-<p>
-  <strong>Video youtube:</strong>
-  <%= @post.video_youtube %>
-
-  <% if @post.video_youtube.present? %>
-    <div class="entry-image">
-      <iframe src="https://www.youtube.com/embed/<%= @post.video_youtube %>?rel=0&autoplay='0'" frameborder='0' allowfullscreen></iframe>
-    </div>
-  <% end %>
-</p>
-
-<p>
-  <strong>Video vimeo:</strong>
-  <%= @post.video_vimeo %>
-
-  <% if @post.video_vimeo.present? %>
-    <div class="entry-image">
-    	<iframe src="https://player.vimeo.com/video/<%= @post.video_vimeo %>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </div>
-  <% end %>
-</p>
-
 
 <p>
   <strong>Pubblicato:</strong>
@@ -76,3 +70,4 @@
 </p>
 
 <%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_authors_post_path(@post), class: 'btn btn-sm btn-warning' %>
