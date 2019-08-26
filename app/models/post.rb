@@ -38,4 +38,14 @@ class Post < ApplicationRecord
     title_changed?
   end
 
+  ## getter method
+  def published_at_formatted 
+    if published_at.present?
+      published_at.strftime('%-d %-b %Y')
+      #"Published #{published_at.strftime('%-d %-b %Y')}"
+    else
+      "not published yet"
+    end
+  end
+
 end

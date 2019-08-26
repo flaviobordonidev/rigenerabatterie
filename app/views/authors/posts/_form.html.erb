@@ -67,6 +67,19 @@
             </div>
           </li>
           <li class="list-group-item">
+            <div class="field">
+              <%= form.label :published %>
+              <%= form.check_box :published, class: "form-control" %>
+              <%#= f.check_box :remove_logo, "data-size" => "medium", "data-on-color" => "primary", "data-on-text" => "SI", "data-off-color" => "default", "data-off-text" => "NO" %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= form.label :published_at %>
+              <%= form.text_field :published_at, class: "form-control" %>
+            </div>
+          </li>
+          <li class="list-group-item">
             <div class="actions">
               <%= form.submit "Crea/Modifica articolo", class: "btn btn-success btn-lg btn-block" %>
             </div>

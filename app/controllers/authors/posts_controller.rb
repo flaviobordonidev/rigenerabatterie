@@ -24,6 +24,9 @@ class Authors::PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    # params restituisce una stringa ed il check-box restituisce "1" se flaggato.
+    params[:post][:published_at] = "#{DateTime.current}" if params[:post][:published] == "1" and params[:post][:published_at].blank?
+    params[:post][:published_at] = "" if params[:post][:published] == "0"
     @post = Post.new(post_params)
     authorize @post
 
@@ -41,6 +44,10 @@ class Authors::PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    #raise "published è #{params[:post][:published] == "1"} - published_at è #{params[:post][:published_at].blank?} - La data di oggi è #{DateTime.current}"
+    # params restituisce una stringa ed il check-box restituisce "1" se flaggato.
+    params[:post][:published_at] = "#{DateTime.current}" if params[:post][:published] == "1" and params[:post][:published_at].blank?
+    params[:post][:published_at] = "" if params[:post][:published] == "0"
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -71,6 +78,6 @@ class Authors::PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :incipit, :content, :content_type, :video_youtube, :video_vimeo, :seocontent, :user_id, :main_image)
+      params.require(:post).permit(:title, :incipit, :content, :content_type, :video_youtube, :video_vimeo, :seocontent, :user_id, :main_image, :published, :published_at)
     end
 end
