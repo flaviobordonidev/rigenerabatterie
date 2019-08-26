@@ -41,6 +41,30 @@
   <%= @post.seocontent %>
 </p>
 
+
+<p>
+  <strong>Video youtube:</strong>
+  <%= @post.video_youtube %>
+
+  <% if @post.video_youtube.present? %>
+    <div class="entry-image">
+      <iframe src="https://www.youtube.com/embed/<%= @post.video_youtube %>?rel=0&autoplay='0'" frameborder='0' allowfullscreen></iframe>
+    </div>
+  <% end %>
+</p>
+
+<p>
+  <strong>Video vimeo:</strong>
+  <%= @post.video_vimeo %>
+
+  <% if @post.video_vimeo.present? %>
+    <div class="entry-image">
+    	<iframe src="https://player.vimeo.com/video/<%= @post.video_vimeo %>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  <% end %>
+</p>
+
+
 <p>
   <strong>Pubblicato:</strong>
   <%= @post.published_at_formatted %>
