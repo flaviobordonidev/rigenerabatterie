@@ -2,7 +2,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.published.order(created_at: "DESC")
+    if params[:tag].present?
+      @posts = Post.published.tagged_with(params[:tag]).order(created_at: "DESC")
+    else
+      @posts = Post.published.order(created_at: "DESC")
+    end
     authorize @posts
   end
 

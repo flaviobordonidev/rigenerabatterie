@@ -16,6 +16,9 @@ class Post < ApplicationRecord
   ## friendly_id
   friendly_id :title, use: :slugged
 
+  ## acts_as_taggable_on
+  acts_as_taggable # Alias for acts_as_taggable_on :tags
+  
   # == Relationships ========================================================
 
   ## one-to-many

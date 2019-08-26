@@ -62,8 +62,8 @@
           </li>
           <li class="list-group-item">
             <div class="field">
-              <label class="control-label">Tags (separati da virgola)</label>
-              <textarea name="incipit" rows="2" class='form-control'>salute, sport, cucina mediterranea, mantenersi in forma</textarea>
+              <%= form.label :tag_list %><!-- separati da virgola -->
+              <%= form.text_area :tag_list, id: :tag_list, class: "form-control" %>
             </div>
           </li>
           <li class="list-group-item">

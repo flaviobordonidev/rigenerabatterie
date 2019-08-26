@@ -13,6 +13,7 @@
       <th>Video vimeo</th>
       <th>Seocontent</th>
       <th>Autore</th>
+      <th>Tags</th>
       <th colspan="1"></th>
     </tr>
   </thead>
@@ -28,6 +29,14 @@
         <td><%= post.video_vimeo %></td>
         <td><%= post.seocontent %></td>
         <td><%= post.user.name %></td>
+        <td>
+  				<div class="entry-content">
+  				  <%#= post.tags.map(&:name).join(', ') %>
+  				  <% post.tags.each do |tag| %>
+  				    <%= link_to tag.name, posts_path(tag: tag.name) %>
+  				  <% end %>
+  				</div>    
+        </td>
         <td><%= link_to 'Show', post %></td>
       </tr>
     <% end %>

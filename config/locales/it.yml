@@ -10,6 +10,10 @@ it:
         video_youtube: "filmato YouTube" 
         video_vimeo: "filmato Vimeo"
         audio: "audio"
+  helpers:
+    label:
+      post:
+        tag_list: "Tags (separati da virgola)"
   mockups:
     page_a:
       first_header: "Questa è l'homepage"
