@@ -14,4 +14,9 @@ class MockupsController < ApplicationController
   def login
     render layout: 'mockups_yield'
   end
+
+  def posts_index
+    render layout: 'mockups_yield'
+  end
+
 end

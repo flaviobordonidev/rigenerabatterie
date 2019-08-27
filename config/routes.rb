@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   get 'mockups/page_b'
   get 'mockups/page_c'
   get 'mockups/login'
+  get 'mockups/posts_index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
