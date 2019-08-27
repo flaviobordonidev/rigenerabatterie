@@ -27,7 +27,7 @@ module S5beginning
     config.assets.precompile += ['pofo/css/animate.css',
                                  'pofo/css/bootstrap.min.css',
                                  'pofo/css/et-line-icons.css',
-                                 'pofo/css/font-awesome.min.css',
+                                 'pofo/css/font-awesome-via_gem.css',
                                  'pofo/css/themify-icons.css',
                                  'pofo/css/swiper.min.css',
                                  'pofo/css/justified-gallery.min.css',

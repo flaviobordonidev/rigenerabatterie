@@ -66,6 +66,9 @@ gem 'trix-rails', '~> 2.0', require: 'trix'
 # tag a single model on several contexts, such as skills, interests, and awards.
 gem 'acts-as-taggable-on', '~> 6.0'
 
+# Font-Awesome SASS gem for use in Ruby projects
+gem 'font-awesome-sass', '~> 5.6', '>= 5.6.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
