@@ -15,8 +15,8 @@ class MockupsController < ApplicationController
     render layout: 'mockups_yield'
   end
 
-  def posts_index
-    render layout: 'mockups_yield'
+  def blog_clean_full_width
+    render layout: 'mockups_pofo'
   end
 
 end
