@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  layout 'pofo'
+
   # GET /posts
   # GET /posts.json
   def index

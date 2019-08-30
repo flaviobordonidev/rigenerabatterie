@@ -20,7 +20,7 @@ class MockupsController < ApplicationController
   end
   
   def blog_post_layout_05
-    render layout: 'mockups_yield'
+    render layout: 'mockups_pofo'
   end
 
 end

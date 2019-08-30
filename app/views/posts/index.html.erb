@@ -44,3 +44,20 @@
 </table>
 
 <br>
+
+
+<%# == Meta_data ============================================================ %>
+
+<% provide(:stylesheet_fontflavio, "pofo/css/themify-icons") %>
+<%# provide(:remove_fontawesome, "true") %>
+
+<%# == Meta_data - end ====================================================== %>
+
+<!-- start header -->
+<header>
+    <%= render "pofo_navigation_menu" %>
+</header>
+<!-- end header -->
+<%= render "pofo_page_title_section" %>
+<%= render "pofo_posts_content_section" %>
+<%= render "pofo_footer" %>
