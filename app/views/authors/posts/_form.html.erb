@@ -28,7 +28,8 @@
             <div class="field">
               <%= form.label :main_image %>
               <% if post.main_image.attached? %>
-                <p><%= image_tag post.main_image.variant(resize: "100x100") %></p>
+                <p><%= image_tag post.main_image.variant(resize: "200x200") %></p>
+                <p><%= link_to 'Remove', delete_image_attachment_authors_post_path(post.main_image.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
               <% else %>
                 <p>Nessuna immagine presente</p>
               <% end %>
@@ -93,12 +94,119 @@
         <%= form.label :incipit %>
         <%= form.text_area :incipit, rows: "3", class: "form-control" %>
       </div>
-      <div class="field"><h6>---Read More---</h6></div>
+      <div class="field"><br/><h6>---Read More---</h6></div>
       <div class="field">
         <%= form.label :content %>
         <%#= form.text_area :content, rows: "49", class: "form-control" %>
         <%= form.trix_editor :content, required: true, autofocus: true %>
       </div>
+
+      <div class="field"><br/><h6>---Central paragraph---</h6></div>
+
+      <div class="field">
+        <%= form.label :paraghraph_title1 %>
+        <%= form.text_area :paraghraph_title1, rows: "3", class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_content1 %>
+        <%= form.trix_editor :paragraph_content1, required: true, autofocus: true %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_image1 %>
+        <% if post.paragraph_image1.attached? %>
+          <p><%= image_tag post.paragraph_image1.variant(resize: "100x100") %></p>
+        <% else %>
+          <p>Nessuna immagine presente</p>
+        <% end %>
+        <%= form.file_field :paragraph_image1, class: "form-control-file" %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_title2 %>
+        <%= form.text_area :paragraph_title2, rows: "3", class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_content2 %>
+        <%= form.trix_editor :paragraph_content2, required: true, autofocus: true %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_title3 %>
+        <%= form.text_area :paragraph_title3, rows: "3", class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_content3 %>
+        <%= form.trix_editor :paragraph_content3, required: true, autofocus: true %>
+      </div>
+
+
+      <div class="field"><br/><h6>---Parallax paragraph---</h6></div>
+
+      <div class="field">
+        <%= form.label :paragraph_title4 %>
+        <%= form.text_area :paragraph_title4, rows: "3", class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_content4 %>
+        <%= form.trix_editor :paragraph_content4, required: true, autofocus: true %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_image4 %>
+        <% if post.paragraph_image4.attached? %>
+          <p><%= image_tag post.paragraph_image4.variant(resize: "100x100") %></p>
+        <% else %>
+          <p>Nessuna immagine presente</p>
+        <% end %>
+        <%= form.file_field :paragraph_image4, class: "form-control-file" %>
+      </div>
+
+
+      <div class="field"><br/><h6>---Default paragraph 1---</h6></div>
+
+      <div class="field">
+        <%= form.label :paragraph_title5 %>
+        <%= form.text_area :paragraph_title5, rows: "3", class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_content5 %>
+        <%= form.trix_editor :paragraph_content5, required: true, autofocus: true %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_image5 %>
+        <% if post.paragraph_image5.attached? %>
+          <p><%= image_tag post.paragraph_image5.variant(resize: "100x100") %></p>
+        <% else %>
+          <p>Nessuna immagine presente</p>
+        <% end %>
+        <%= form.file_field :paragraph_image5, class: "form-control-file" %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_image_label5 %>
+        <%= form.text_area :paragraph_image_label5, class: "form-control" %>
+      </div>
+
+      <div class="field"><br/><h6>---Default paragraph 2---</h6></div>
+
+      <div class="field">
+        <%= form.label :paragraph_title6 %>
+        <%= form.text_area :paragraph_title6, rows: "3", class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_content6 %>
+        <%= form.trix_editor :paragraph_content6, required: true, autofocus: true %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_image6 %>
+        <% if post.paragraph_image6.attached? %>
+          <p><%= image_tag post.paragraph_image6.variant(resize: "100x100") %></p>
+        <% else %>
+          <p>Nessuna immagine presente</p>
+        <% end %>
+        <%= form.file_field :paragraph_image6, class: "form-control-file" %>
+      </div>
+      <div class="field">
+        <%= form.label :paragraph_image_label6 %>
+        <%= form.text_area :paragraph_image_label6, class: "form-control" %>
+      </div>
+
     </div><!--.col-md-8 -->
 
   </div><!--.row -->

@@ -12,6 +12,10 @@ class Post < ApplicationRecord
 
   ## ActiveStorage
   has_one_attached :main_image
+  has_one_attached :paragraph_image1
+  has_one_attached :paragraph_image4
+  has_one_attached :paragraph_image5
+  has_one_attached :paragraph_image6
 
   ## friendly_id
   friendly_id :title, use: :slugged

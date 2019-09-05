@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_26_113528) do
+ActiveRecord::Schema.define(version: 2019_09_02_103006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,6 +85,20 @@ ActiveRecord::Schema.define(version: 2019_08_26_113528) do
     t.string "slug"
     t.boolean "published", default: false
     t.datetime "published_at"
+    t.string "paraghraph_title1"
+    t.text "paragraph_content1"
+    t.string "paragraph_title2"
+    t.text "paragraph_content2"
+    t.string "paragraph_title3"
+    t.text "paragraph_content3"
+    t.string "paragraph_title4"
+    t.text "paragraph_content4"
+    t.string "paragraph_title5"
+    t.text "paragraph_content5"
+    t.string "paragraph_image_label5"
+    t.string "paragraph_title6"
+    t.text "paragraph_content6"
+    t.string "paragraph_image_label6"
     t.index ["content_type"], name: "index_posts_on_content_type"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
     t.index ["user_id"], name: "index_posts_on_user_id"
