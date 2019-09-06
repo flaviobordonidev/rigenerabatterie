@@ -10,7 +10,7 @@
                     <!-- end page title -->
                     <!-- start sub title -->
                     <span class="text-white opacity6 alt-font no-margin-bottom text-uppercase text-small">
-                        <%= l @post.published_at, format: :short %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        <%= l @post.published_at, format: :short if @post.published_at.present? %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                         by <a href="blog-masonry.html" class="text-white"><%= @post.user.name %></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                         
                         <% @post.tags.each do |tag| %>

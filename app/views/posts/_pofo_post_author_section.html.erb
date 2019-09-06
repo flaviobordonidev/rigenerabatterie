@@ -29,10 +29,11 @@
                 <div class="display-table width-100 border-all border-color-extra-light-gray padding-50px-all sm-padding-30px-all xs-padding-20px-all">
                     <div class="display-table-cell width-130px text-center vertical-align-top xs-margin-15px-bottom xs-width-100 xs-display-block xs-text-center">
                         <%= image_tag "pofo/avtar-01.jpg", class: "img-circle width-100px", alt:"" %>
+                        <%= post.user.account_image.attached? ? image_tag(post.user.account_image, alt: "", class: "img-circle width-100px") : image_tag('pofo/avtar-01.jpg', alt: "", class: "img-circle width-100px") %>
                     </div>
                     <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block xs-text-center">
-                        <a href="blog-post-layout-05.html#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small">Alexander Harvard</a>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                        <a href="blog-post-layout-05.html#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small"><%= post.user.name %></a>
+                        <p><%= sanitize post.user.biography %></p>
                         <a class="btn btn-very-small btn-black margin-20px-top">All author posts</a>
                     </div>
                 </div>
