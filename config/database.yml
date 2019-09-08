@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: s5beginning_development
+  database: rebisworld_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: s5beginning_test
+  database: rebisworld_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: s5beginning_production
-  username: s5beginning
-  password: <%= ENV['S5BEGINNING_DATABASE_PASSWORD'] %>
+  database: rebisworld_production
+  username: rebisworld
+  password: <%= ENV['PRODUCTION_DATABASE_PASSWORD'] %>
