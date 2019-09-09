@@ -30,7 +30,7 @@
     <%= stylesheet_link_tag 'pofo/css/bootstrap.min', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- et line icon --> 
     <%= stylesheet_link_tag 'pofo/css/et-line-icons', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <!-- font-awesome icon -->
+    <!-- font better-glory -->
     <%#= stylesheet_link_tag 'pofo/css/font-awesome.min', media: 'all', 'data-turbolinks-track': 'reload' %>
     <% unless yield(:remove_fontawesome).present? %>
       <%= stylesheet_link_tag 'pofo/css/font-awesome-via_gem', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -41,6 +41,7 @@
     <% if yield(:stylesheet_fontflavio).present? %>
       <%= stylesheet_link_tag "#{yield(:stylesheet_fontflavio)}", media: 'all', 'data-turbolinks-track': 'reload' %>
     <% end %>
+    
     <!-- swiper carousel -->
     <%= stylesheet_link_tag 'pofo/css/swiper.min', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- justified gallery  -->

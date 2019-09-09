@@ -25,5 +25,6 @@ Rails.application.routes.draw do
   get 'mockups/login'
   get 'mockups/blog_clean_full_width'
   get 'mockups/blog_post_layout_05'
+  get 'mockups/homepage'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

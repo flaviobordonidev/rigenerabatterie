@@ -23,4 +23,8 @@ class MockupsController < ApplicationController
     render layout: 'mockups_pofo'
   end
 
+  def homepage
+    render layout: 'mockups_pofo'
+  end
+
 end
