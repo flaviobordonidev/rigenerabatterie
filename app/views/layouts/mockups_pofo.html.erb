@@ -38,7 +38,7 @@
       <%= stylesheet_link_tag 'pofo/css/font-awesome-via_gem', media: 'all', 'data-turbolinks-track': 'reload' %>
     <% end %>
     <!-- themify icon -->
-    <%#= stylesheet_link_tag 'pofo/css/themify-icons', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'pofo/css/themify-icons', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- fontflavio icon -->
     <% if yield(:stylesheet_fontflavio).present? %>
       <%= stylesheet_link_tag "#{yield(:stylesheet_fontflavio)}", media: 'all', 'data-turbolinks-track': 'reload' %>

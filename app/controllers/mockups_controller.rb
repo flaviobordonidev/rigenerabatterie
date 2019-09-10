@@ -27,4 +27,8 @@ class MockupsController < ApplicationController
     render layout: 'mockups_pofo'
   end
 
+  def the_formula
+    render layout: 'mockups_pofo'
+  end
+
 end

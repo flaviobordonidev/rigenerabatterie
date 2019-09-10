@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'mockups#page_a'
+  root 'homepage#show'
 
   devise_for :users, path_names: {sign_in: 'login'}, path: '', controllers: { sessions: 'users/sessions' }
   resources :users
@@ -26,5 +26,6 @@ Rails.application.routes.draw do
   get 'mockups/blog_clean_full_width'
   get 'mockups/blog_post_layout_05'
   get 'mockups/homepage'
+  get 'mockups/the_formula'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
