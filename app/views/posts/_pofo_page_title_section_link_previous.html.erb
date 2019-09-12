@@ -1,0 +1,50 @@
+<!--GUTIJA (Vitalità/Apatia)-->
+<!--BAHONU (Profondità/Superficialità)-->
+<!--SIHTAS (Affetto/Distacco)-->
+<!--ELOIN (Dedizione/Disinteresse)-->
+<!--YARTHA (Oculatezza/Spreco)-->
+<!--KELANY (Unicità/Mediocrità)-->
+
+<% if params[:tag] == "Kelany" %>
+  <%= link_to request.params.merge(tag: "Yartha"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    <
+  <% end %>
+  <a href="#about" class="inner-link">
+  <h5 class="text-white alt-font font-weight-600 margin-10px-bottom" style="font-family:caligo; letter-spacing: 2px; line-height: 1.2;"> <strong style="letter-spacing: 8px; line-height: 1.8;">KELANY</strong><br/> l'isola dell' <br/>Unicità e<br/>Mediocrità</h5>
+  </a>
+<% elsif params[:tag] == "Bahonu" %>
+  <%= link_to request.params.merge(tag: "Gutija"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    <
+  <% end %>
+  <a href="#about" class="inner-link">
+  <h5 class="text-white alt-font font-weight-600 margin-10px-bottom" style="font-family:caligo; letter-spacing: 2px; line-height: 1.2;"> <strong style="letter-spacing: 8px; line-height: 1.8;">BAHONU</strong><br/> l'isola della <br/>Profondità e<br/>Superficialità</h5>
+  </a>
+<% elsif params[:tag] == "Sihtas" %>
+  <%= link_to request.params.merge(tag: "Bahonu"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    <
+  <% end %>
+  <a href="#about" class="inner-link">
+  <h5 class="text-white alt-font font-weight-600 margin-10px-bottom" style="font-family:caligo; letter-spacing: 2px; line-height: 1.2;"> <strong style="letter-spacing: 8px; line-height: 1.8;">SIHTAS</strong><br/> l'isola dell' <br/>Affetto e<br/>Distacco</h5>
+  </a>
+<% elsif params[:tag] == "Eloin" %>
+  <%= link_to request.params.merge(tag: "Sihtas"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    <
+  <% end %>
+  <a href="#about" class="inner-link">
+  <h5 class="text-white alt-font font-weight-600 margin-10px-bottom" style="font-family:caligo; letter-spacing: 2px; line-height: 1.2;"> <strong style="letter-spacing: 8px; line-height: 1.8;">ELOIN</strong><br/> l'isola della <br/>Dedizione e<br/>Disinteresse</h5>
+  </a>
+<% elsif params[:tag] == "Yartha" %>
+  <%= link_to request.params.merge(tag: "Eloin"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    <
+  <% end %>
+  <a href="#about" class="inner-link">
+  <h5 class="text-white alt-font font-weight-600 margin-10px-bottom" style="font-family:caligo; letter-spacing: 2px; line-height: 1.2;"> <strong style="letter-spacing: 8px; line-height: 1.8;">YARTHA</strong><br/> l'isola dell' <br/>Oculatezza e<br/>Spreco</h5>
+  </a>
+<% else %>
+  <%= link_to request.params.merge(tag: "Kelany"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    <
+  <% end %>
+  <a href="#about" class="inner-link">
+  <h5 class="text-white alt-font font-weight-600 margin-10px-bottom" style="font-family:caligo; letter-spacing: 2px; line-height: 1.2;"> <strong style="letter-spacing: 8px; line-height: 1.8;">GUTIJA</strong><br/> l'isola della <br/>Vitalità e<br/>Apatia</h5>
+  </a>
+<% end %>

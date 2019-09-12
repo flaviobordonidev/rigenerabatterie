@@ -1,0 +1,32 @@
+<!--GUTIJA (Vitalità/Apatia)-->
+<!--BAHONU (Profondità/Superficialità)-->
+<!--SIHTAS (Affetto/Distacco)-->
+<!--ELOIN (Dedizione/Disinteresse)-->
+<!--YARTHA (Oculatezza/Spreco)-->
+<!--KELANY (Unicità/Mediocrità)-->
+
+<% if params[:tag] == "Kelany" %>
+  <%= link_to request.params.merge(tag: "Gutija"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    >
+  <% end %>
+<% elsif params[:tag] == "Bahonu" %>
+  <%= link_to request.params.merge(tag: "Sihtas"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    >
+  <% end %>
+<% elsif params[:tag] == "Sihtas" %>
+  <%= link_to request.params.merge(tag: "Eloin"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    >
+  <% end %>
+<% elsif params[:tag] == "Eloin" %>
+  <%= link_to request.params.merge(tag: "Yartha"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    >
+  <% end %>
+<% elsif params[:tag] == "Yartha" %>
+  <%= link_to request.params.merge(tag: "Kelany"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    >
+  <% end %>
+<% else %>
+  <%= link_to request.params.merge(tag: "Bahonu"), class: "text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom", style: "font-size: 32px;" do %>
+    >
+  <% end %>
+<% end %>

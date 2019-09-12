@@ -1,17 +1,27 @@
 <!-- start page title section -->
-<section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('<%= image_path('pofo/parallax-bg33.jpg') %>');">
-    <div class="opacity-medium bg-extra-dark-gray"></div>
+<!--<section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%#= image_path('pofo/world-gutija-pos.png') %>');">-->
+<%= render "pofo_page_title_section_bg_image" %>
+  <!--<div class="opacity-medium bg-extra-dark-gray"></div>-->
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">
-                <div class="display-table-cell vertical-align-middle text-center">
-                    <!-- start page title -->
-                    <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">Blog clean full width</h1>
-                    <span class="text-white opacity6 alt-font">Lorem Ipsum is simply dummy text printing</span>
-                    <!-- end page title --> 
-                </div>
-            </div>
+      <div class="row">
+        <!--<div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">-->
+        <div class="col-md-12 col-sm-12 col-xs-12 one-second-screen display-table page-title-large">
+          <div class="display-table-cell vertical-align-middle text-left">
+            <!--<a href="" class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom" style="font-size: 32px;" ><</a>-->
+            <!--<h5 class="text-white alt-font font-weight-600 margin-10px-bottom" style="font-family:caligo; letter-spacing: 2px; line-height: 1.2;"> <strong style="letter-spacing: 8px; line-height: 1.8;">GUTIJA</strong><br/> l'isola della <br/>Superficialità<br/>Profondità</h5>-->
+            <%= render "pofo_page_title_section_link_previous" %>
+            <!--<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-refresh text-medium-gray icon-medium margin-25px-bottom sm-margin-15px-bottom"></i></a>-->
+            <%= render "pofo_page_title_section_link_rotate" %>
+          </div>
+          <div class="display-table-cell vertical-align-middle text-right">
+            <!--<a href="" class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom" style="font-size: 32px; line-height: 1.6;" >></a>-->
+            <%= render "pofo_page_title_section_link_next" %>
+            <h5 class="text-white alt-font font-weight-600 margin-10px-bottom" style="font-family:caligo; letter-spacing: 2px;"><strong style="letter-spacing: 8px;">&nbsp;</strong><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</h5>
+          </div>
         </div>
+      </div>
     </div>
+  <!--</div>-->
 </section>
 <!-- end page title section --> 
+

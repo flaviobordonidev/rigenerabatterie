@@ -1,0 +1,11 @@
+<% if params[:rotate] == "neg" %>
+  <%= link_to request.params.merge(rotate: "pos"), style: "line-height: 0.02;"  do %>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-refresh text-medium-gray icon-medium margin-25px-bottom sm-margin-15px-bottom"></i>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;capovolgi l'isola</p>
+  <% end %>
+<% else %>
+  <%= link_to request.params.merge(rotate: "neg"), style: "line-height: 0.02;" do %>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-refresh text-medium-gray icon-medium margin-25px-bottom sm-margin-15px-bottom"></i>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;capovolgi l'isola</p>
+  <% end %>
+<% end %>

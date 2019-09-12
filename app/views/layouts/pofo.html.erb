@@ -32,16 +32,23 @@
     <%= stylesheet_link_tag 'pofo/css/et-line-icons', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- font better-glory -->
     <%#= stylesheet_link_tag 'pofo/css/font-awesome.min', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <% unless yield(:remove_fontawesome).present? %>
+    <%# unless yield(:remove_fontawesome).present? %>
       <%= stylesheet_link_tag 'pofo/css/font-awesome-via_gem', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <% end %>
+    <%# end %>
     <!-- themify icon -->
     <%= stylesheet_link_tag 'pofo/css/themify-icons', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- fontflavio icon -->
     <% if yield(:stylesheet_fontflavio).present? %>
       <%= stylesheet_link_tag "#{yield(:stylesheet_fontflavio)}", media: 'all', 'data-turbolinks-track': 'reload' %>
     <% end %>
-    
+
+    <!-- better-glory -->
+    <%= stylesheet_link_tag 'pofo/css/better-glory', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- font caligo -->
+    <%= stylesheet_link_tag 'pofo/css/caligo', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- font rebis -->
+    <%= stylesheet_link_tag 'pofo/css/rebis', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <!-- swiper carousel -->
     <%= stylesheet_link_tag 'pofo/css/swiper.min', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- justified gallery  -->
@@ -62,6 +69,18 @@
     <!--[if IE]>
         <script src="js/html5shiv.js"></script>
     <![endif]-->
+
+    <!-- MailerLite Universal -->
+    <script>
+    (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+    var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+    f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+    var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+    _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+    
+    var ml_account = ml('accounts', '1395738', 'c7p4b5r4a6', 'load');
+    </script>
+    <!-- End MailerLite Universal -->
   </head>
   
   <body>

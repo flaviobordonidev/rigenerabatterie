@@ -1,0 +1,44 @@
+<!--gutija (Vitalità/Apatia)-->
+<!--bahonu (Profondità/Superficialità)-->
+<!--sihtas (Affetto/Distacco)-->
+<!--eloin (Dedizione/Disinteresse)-->
+<!--yartha (Oculatezza/Spreco)-->
+<!--kelany (Unicità/Mediocrità)-->
+
+<% if params[:tag] == "Kelany" %>
+  <% if params[:rotate] == "neg" %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-kelany-neg.png') %>');">
+  <% else %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-kelany-pos.png') %>');">
+  <% end %>
+<% elsif params[:tag] == "Bahonu" %>
+  <% if params[:rotate] == "neg" %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-bahonu-neg.png') %>');">
+  <% else %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-bahonu-pos.png') %>');">
+  <% end %>
+<% elsif params[:tag] == "Sihtas" %>
+  <% if params[:rotate] == "neg" %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-sihtas-neg.png') %>');">
+  <% else %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-sihtas-pos.png') %>');">
+  <% end %>
+<% elsif params[:tag] == "Eloin" %>
+  <% if params[:rotate] == "neg" %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-eloin-neg.png') %>');">
+  <% else %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-eloin-pos.png') %>');">
+  <% end %>
+<% elsif params[:tag] == "Yartha" %>
+  <% if params[:rotate] == "neg" %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-yartha-neg.png') %>');">
+  <% else %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-yartha-pos.png') %>');">
+  <% end %>
+<% else %>
+  <% if params[:rotate] == "neg" %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-gutija-neg.png') %>');">
+  <% else %>
+    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.1" style="background-image:url('<%= image_path('pofo/world-gutija-pos.png') %>');">
+  <% end %>
+<% end %>

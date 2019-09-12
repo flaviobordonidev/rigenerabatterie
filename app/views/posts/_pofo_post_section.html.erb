@@ -1,21 +1,25 @@
-<!-- start section -->
-<section class="wow fadeIn">
+<!-- start blog content section -->
+<section id="about" class="wow fadeIn">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12 xs-text-center">
-        <figure class="wp-caption alignright">
-          <%= post.paragraph_image5.attached? ? image_tag(@post.paragraph_image5, alt: "") : image_tag('pofo/blog-details-img10.jpg', alt: "") %><figcaption class="wp-caption-text"><%= post.paragraph_image_label5 %></figcaption>
-        </figure>
-        <span class="text-medium alt-font font-weight-600 margin-20px-bottom display-block text-extra-dark-gray"><%= post.paragraph_title5 %></span>
-        <p><%= sanitize post.paragraph_content5 %></p>
-        
-        <figure class="wp-caption alignleft">
-          <%= post.paragraph_image6.attached? ? image_tag(@post.paragraph_image6, alt: "") : image_tag('pofo/blog-details-img11.jpg', alt: "") %><figcaption class="wp-caption-text"><%= post.paragraph_image_label6 %></figcaption>
-        </figure>
-        <span class="text-medium alt-font font-weight-600 margin-20px-bottom display-block text-extra-dark-gray"><%= post.paragraph_title6 %></span>
-        <p><%= sanitize post.paragraph_content6 %></p>
+        <h5 class="font-weight-600 text-extra-dark-gray alt-font"><%= post.paraghraph_title1 %></h5>
+        <%= sanitize "#{post.paragraph_content1}" %>
       </div>
+      <% if post.paragraph_image1.attached? %>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <%= image_tag "pofo/default-post-bg.png", alt: "", class: "width-100 margin-50px-tb" %>
+          <!--<img src="images/blog-details-img7.jpg" alt="" class="width-100 margin-50px-tb">-->
+        </div>
+      <% end %>
+      <div class="col-md-12 col-sm-12 col-xs-12 last-paragraph-no-margin xs-text-center">
+        <span class="text-extra-dark-gray font-weight-600 alt-font margin-10px-bottom display-block text-medium"><%= post.paragraph_title2 %></span>
+        <p class="width-90 xs-width-100"><%= sanitize "#{post.paragraph_content2}" %> </p>
+      </div>
+      <!--<div class="col-md-12 col-sm-12 col-xs-12 last-paragraph-no-margin display-table text-right xs-text-center">-->
+      <!--  <span class="alt-font margin-20px-right">storia e testi di Roberta Cusimano</span>-->
+      <!--</div>-->
     </div>
   </div>
 </section>
-<!-- end section -->
+<!-- end blog content section -->

@@ -31,4 +31,12 @@ class MockupsController < ApplicationController
     render layout: 'mockups_pofo'
   end
 
+  def posts_index
+    render layout: 'mockups_pofo'
+  end
+
+  def posts_show
+    render layout: 'mockups_pofo'
+  end
+
 end

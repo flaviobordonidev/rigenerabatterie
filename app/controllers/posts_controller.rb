@@ -5,10 +5,11 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     if params[:tag].present?
-      @pagy, @posts = pagy(Post.published.tagged_with(params[:tag]).order(created_at: 'DESC'), items: 2)
+      @pagy, @posts = pagy(Post.published.tagged_with(params[:tag]).order(created_at: 'DESC'), items: 8)
       #@posts = Post.published.tagged_with(params[:tag]).order(created_at: "DESC")
     else
-      @pagy, @posts = pagy(Post.published.order(created_at: 'DESC'), items: 2)
+      @pagy, @posts = pagy(Post.published.tagged_with("Gutija").order(created_at: 'DESC'), items: 8)
+      #@pagy, @posts = pagy(Post.published.order(created_at: 'DESC'), items: 8)
       #@posts = Post.published.order(created_at: "DESC")
     end
     authorize @posts

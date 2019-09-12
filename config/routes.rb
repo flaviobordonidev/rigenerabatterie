@@ -27,5 +27,8 @@ Rails.application.routes.draw do
   get 'mockups/blog_post_layout_05'
   get 'mockups/homepage'
   get 'mockups/the_formula'
+  get 'mockups/posts_index'
+  get 'mockups/posts_show'
+  get 'the_formula/show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

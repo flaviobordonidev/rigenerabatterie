@@ -28,6 +28,8 @@ module Rebisworld
                                  'pofo/css/bootstrap.min.css',
                                  'pofo/css/et-line-icons.css',
                                  'pofo/css/better-glory.css',
+                                 'pofo/css/caligo.css',
+                                 'pofo/css/rebis.css',
                                  'pofo/css/font-awesome-via_gem.css',
                                  'pofo/css/themify-icons.css',
                                  'pofo/css/swiper.min.css',
