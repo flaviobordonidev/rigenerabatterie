@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_02_103006) do
+ActiveRecord::Schema.define(version: 2019_09_25_105813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,24 @@ ActiveRecord::Schema.define(version: 2019_09_02_103006) do
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "post_paragraphs", force: :cascade do |t|
+    t.bigint "post_id"
+    t.string "title"
+    t.text "content"
+    t.string "imagecaption"
+    t.string "youtube"
+    t.string "youtubecaption"
+    t.string "vimeo"
+    t.string "vimeocaption"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "pstyle", default: 0
+    t.integer "list_position", default: 1
+    t.index ["list_position"], name: "index_post_paragraphs_on_list_position"
+    t.index ["post_id"], name: "index_post_paragraphs_on_post_id"
+    t.index ["pstyle"], name: "index_post_paragraphs_on_pstyle"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -148,5 +166,6 @@ ActiveRecord::Schema.define(version: 2019_09_02_103006) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "eg_posts", "users"
+  add_foreign_key "post_paragraphs", "posts"
   add_foreign_key "posts", "users"
 end

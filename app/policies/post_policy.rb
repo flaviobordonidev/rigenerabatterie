@@ -34,7 +34,7 @@ class PostPolicy < ApplicationPolicy
         false #se arrivo qui c'è un errore quindi non autorizzo
       end
     else
-      false
+      true #se non sono loggato
     end
   end
   

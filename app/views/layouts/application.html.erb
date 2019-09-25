@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:html_head_title) %> | Baseline5_2</title>
+    <!--<title><%#= yield(:html_head_title) %> | Baseline5_2</title>-->
+    <title><%= content_for?(:page_title) ? "#{yield(:page_title)} | cmspofo" : "cmspofo") %></title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

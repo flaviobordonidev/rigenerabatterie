@@ -28,6 +28,9 @@ class Post < ApplicationRecord
   ## one-to-many
   belongs_to :user
 
+  has_many :post_paragraphs, inverse_of: :post, dependent: :destroy
+  accepts_nested_attributes_for :post_paragraphs, reject_if: lambda { |pp| pp[:title].blank? and pp[:content].blank? }, allow_destroy: true
+
   # == Validations ==========================================================
 
   # == Scopes ===============================================================

@@ -7,11 +7,15 @@
           <div class="display-table-cell width-130px text-center vertical-align-top xs-margin-15px-bottom xs-width-100 xs-display-block xs-text-center">
             <!--<img src="images/avtar-01.jpg" class="img-circle width-100px" alt="" />-->
             <%#= image_tag "pofo/avtar-01.jpg", class: "img-circle width-100px", alt: "" %>
-            <%= image_tag post.user.account_image.variant(combine_options: {resize: '100>', gravity: 'Center', crop: '100x100+0+0' }), style: "border-radius: 50%" %>
+            <% if post.user.account_image.attached? %>
+              <%= image_tag post.user.account_image.variant(combine_options: {resize: '100>', gravity: 'Center', crop: '100x100+0+0' }), style: "border-radius: 50%" %>
+            <% else %>
+              Nessuna immagine presente
+            <% end %>
           </div>
           <div class="padding-40px-left display-table-cell vertical-align-top last-paragraph-no-margin xs-no-padding-left xs-display-block xs-text-center">
             <a href="#" class="text-extra-dark-gray text-uppercase alt-font font-weight-600 margin-10px-bottom display-inline-block text-small"><%= post.user.name %></a>
-            <p><%= post.user.bio %></p>
+            <p><%= post.user.biography %></p>
             <a class="btn btn-very-small btn-black margin-20px-top">All author posts</a>
           </div>
         </div>

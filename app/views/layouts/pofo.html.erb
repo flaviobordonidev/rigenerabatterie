@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- title -->
-    <title><%= yield(:page_title) %> | cmspofo</title>
+    <!--<title><%#= content_for?(:page_title) ? yield(:page_title)+" | cmspofo" : "cmspofo" %></title>-->
+    <title><%= content_for?(:page_title) ? yield(:page_title)+" | " : "" %>cmspofo</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -81,6 +82,16 @@
     var ml_account = ml('accounts', '1395738', 'c7p4b5r4a6', 'load');
     </script>
     <!-- End MailerLite Universal -->
+    
+    <!-- Elimina paragrapho -->
+    <script>
+      $(document).on "turbolinks:load", ->
+        $('form').on 'click', '.remove_fields', (event) ->
+          $(this).prev('input[type=hidden]').val('1')
+          $(this).closest('fieldset').hide()
+          event.preventDefault()
+    </script>
+    <!-- End Elimina paragrapho -->
   </head>
   
   <body>
@@ -152,6 +163,5 @@
     <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>-->
     <!-- setting -->
     <%= javascript_include_tag 'pofo/js/main', 'data-turbolinks-track' => true %>
-
   </body>
 </html>

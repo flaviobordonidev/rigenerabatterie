@@ -1,0 +1,26 @@
+
+<!-- da layout la chiamata è -->
+<%= render "stylesheet_pofo_css_animate", default: true %>
+<!--
+default=true vuol dire che normalmente è presente e se vuoi la puoi disattivare nei metatags della view
+default=false vuol dire che normalmente non è presente nel layout e se vuoi la puoi attivare nei metatags della view
+-->
+
+    <% if yield(:stylesheet_fontflavio).present? %>
+
+
+    <!-- animation -->
+    <%= stylesheet_link_tag 'pofo/css/animate', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+
+
+
+
+    <% unless yield(:remove_fontawesome).present? %>
+      <%= stylesheet_link_tag 'pofo/css/font-awesome-via_gem', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <% end %>
+
+    <!-- fontflavio icon -->
+    <% if yield(:stylesheet_fontflavio).present? %>
+      <%= stylesheet_link_tag "#{yield(:stylesheet_fontflavio)}", media: 'all', 'data-turbolinks-track': 'reload' %>
+    <% end %>

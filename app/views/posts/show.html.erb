@@ -1,9 +1,24 @@
 <%# == Meta_data ============================================================ %>
 
-<% provide(:page_title, @post.title) %>
+<%# provide(:page_title, @post.title) %>
+<%# content_for(:page_title, @post.title) %>
+<% provide :page_title do %>
+  Post: <%= @post.title %>
+<% end %>
+
 <% provide(:menu_blog_nav_link, "active") %>
 
 <%# == Meta_data - end ====================================================== %>
+
+<!-- Edit button -->
+  <% if current_user.present? == true %>
+    <div class="buy-theme alt-font sm-display-none">
+      <%= link_to edit_authors_post_path(@post) do %>
+        <i class="ti-hand-point-right"></i><span>Edit</span>
+      <% end %>
+    </div>
+  <% end %>
+<!-- end Edit button -->
 
 <!-- start header -->
 <header>
@@ -17,6 +32,32 @@
 
 
 <%#= render "pofo_post_section", post: @post %>
+
+<!-- start section -->
+<section class="wow fadeIn">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 xs-text-center">
+
+              <% @post.post_paragraphs.each do |paragraph| %>
+                <% case paragraph.pstyle %>
+                <% when "central" %>
+                  <%= render "pofo_post_paragraph_central", paragraph: paragraph %>
+                <% when "left" %>
+                  <%= render "pofo_post_paragraph_left", paragraph: paragraph %>
+                <% when "right" %>
+                  <%= render "pofo_post_paragraph_right", paragraph: paragraph %>
+                <% end %>
+              <% end %>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+
+
+
 <!-- start blog content section -->
 <section id="about" class="wow fadeIn">
   <div class="container">
@@ -49,6 +90,3 @@
 <%#= render "pofo_post_comments_section" %>
 <%#= render "pofo_post_comments_form" %>
 <%= render "layouts/pofo_footer" %>
-
-
-
