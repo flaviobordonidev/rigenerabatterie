@@ -130,12 +130,19 @@
       <%= form.fields_for :post_paragraphs do |builder| %>
       <%#= form.fields_for :post_paragraphs, form.object.post_paragraphs.order(list_position: "ASC") do |builder| %>
         <%# list_position_counter += 1 %>
+
+<%# if builder.object.image.attached? %>
+  <%#= image_tag builder.object.image %>
+<%# else %>
+  <!--<p>Nessuna immagine presente</p>-->
+<%# end %>
+
         <%= render "paragraph_fields", form: builder %>
         <br/>
       <% end %>
-      <%= link_to "#", class: "btn btn-warning btn-lg" do %>
-        "icons +" Aggiungi paragrafo
-      <% end %>
+      <%#= link_to "#", class: "btn btn-warning btn-lg" do %>
+        <!--"icons +" Aggiungi paragrafo-->
+      <%# end %>
     </div><!--.col-md-12 -->
   </div><!--.row -->
 

@@ -7,6 +7,9 @@ class PostParagraph < ApplicationRecord
 
   enum pstyle: {central: 0, left: 1, right:2}
 
+  ## ActiveStorage
+  has_one_attached :image
+
   # == Relationships ========================================================
 
   #belongs_to :post

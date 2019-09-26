@@ -40,6 +40,13 @@
             <div class="col-md-12 col-sm-12 col-xs-12 xs-text-center">
 
               <% @post.post_paragraphs.each do |paragraph| %>
+
+<% if paragraph.image.attached? %>
+  <%= image_tag paragraph.image %>
+<% else %>
+  <p>Nessuna immagine presente</p>
+<% end %>
+
                 <% case paragraph.pstyle %>
                 <% when "central" %>
                   <%= render "pofo_post_paragraph_central", paragraph: paragraph %>
