@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :posts, :except => [:show] do
       member do
         delete :delete_image_attachment
+        delete :delete_image_paragraph
       end
     end
   end

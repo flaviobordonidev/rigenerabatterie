@@ -43,10 +43,16 @@
       <!--<br><img src="https://images.pexels.com/photos/634843/pexels-photo-634843.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=200" alt="Immagine demo presa da pexels.com" width="100" height="100"><br>-->
       <% if form.object.image.attached? %>
         <%= image_tag form.object.image.variant(resize: "100x100") %>
+        <p><%= link_to 'Remove', delete_image_paragraph_authors_post_path(form.object.image.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
       <% else %>
         <p>Nessuna immagine presente</p>
       <% end %>
       <%= form.file_field :image, class: "form-control-file" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :imagecaption %>
+      <%= form.text_field :imagecaption, class: "form-control" %>
     </div>
 
     <div class="field">
